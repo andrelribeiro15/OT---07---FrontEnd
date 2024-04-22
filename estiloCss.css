@@ -1,0 +1,99 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background-image: url('https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5); /* Camada escura para melhor contraste */
+}
+
+.login-form {
+    position: relative;
+    padding: 40px;
+    background:whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 2; /* Garante que o formulário fique acima do pseudo-elemento ::before */
+    opacity: 0.6;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    opacity: 0.5;
+   color: blue;
+    background-image: linear-gradient(to left, #a200ff, #d34d36);
+    font-weight: bold;
+    -webkit-background-clip: text;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px dashed rgb(10, 10, 10);
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho do input */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-form button:hover {
+    background-color: #68dbf0;
+    text-shadow: 10px 10px 15px rgb(8, 8, 8);
+}
+
+.message{
+
+    padding: 19px 60px;
+    position: fixed;
+    top: 20px;
+    right: 105px;
+    background-color:red;
+    border-radius: 3px;
+    color: white;
+
+    animation: slide 0.2s ;
+
+}
+
+@keyframes slide{
+
+    0%{
+
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
